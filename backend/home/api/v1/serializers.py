@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import SubMenu
+from home.models import Ferry,Mndhej,Nhuddi,SubMenu,Zadsfs
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,28 @@ class SubMenuSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SubMenu
+        fields = "__all__"
+
+class MndhejSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Mndhej
+        fields = "__all__"
+
+class ZadsfsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Zadsfs
+        fields = "__all__"
+
+class FerrySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Ferry
+        fields = "__all__"
+
+class NhuddiSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Nhuddi
         fields = "__all__"
