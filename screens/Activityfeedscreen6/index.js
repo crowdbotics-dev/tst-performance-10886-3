@@ -6,8 +6,7 @@ const pressed = () => {
 };
 
 const ActivityFeedScreen = () => {
-  return (
-    <ScrollView>
+  return <ScrollView>
       <View style={styles.container}>
         <View style={styles.headerContainer}>
           <ProfileImage />
@@ -28,13 +27,13 @@ const ActivityFeedScreen = () => {
         <View style={styles.pt30}>
           <View style={styles.galleryRow}>
             <View style={styles.smallPost}>
-              <Post onPress={pressed}/>
+              <Post onPress={pressed} />
             </View>
             <View style={styles.smallPost}>
-              <Post onPress={pressed}/>
+              <Post onPress={pressed} />
             </View>
             <View style={styles.smallPost}>
-              <Post onPress={pressed}/>
+              <Post onPress={pressed} />
             </View>
           </View>
         </View>
@@ -55,17 +54,15 @@ const ActivityFeedScreen = () => {
           </View>
         </View>
       </View>
-    </ScrollView>
-  );
+    </ScrollView>;
 };
-const styles = StyleSheet.create({
 
+const styles = StyleSheet.create({
   container: {
     padding: 10,
     height: "100%",
     backgroundColor: "white"
   },
-
   followingSection: {
     display: "flex",
     flexDirection: "row",
@@ -74,7 +71,6 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 30,
     paddingTop: 20
-
   },
   headerContainer: {
     display: "flex",
@@ -96,7 +92,6 @@ const styles = StyleSheet.create({
     width: 15,
     height: 15,
     marginBottom: 5,
-
     shadowColor: "#0000",
     shadowOffset: {
       width: 0,
@@ -104,7 +99,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 1.3,
     shadowRadius: 3.84
-
   },
   followingIcon: {
     width: 15,
@@ -148,15 +142,12 @@ const styles = StyleSheet.create({
     padding: 3
   }
 });
-
 export default ActivityFeedScreen;
 
-const Post = (props) => {
-  return (
-    <TouchableHighlight onPress={props.onPress} style={postStyles.galleryPost} underlayColor='#DDDDDD'>
+const Post = props => {
+  return <TouchableHighlight onPress={props.onPress} style={postStyles.galleryPost} underlayColor='#DDDDDD'>
         <Image style={postStyles.editIcon} source={require("./assets/edit.png")} />
-    </TouchableHighlight>
-  );
+    </TouchableHighlight>;
 };
 
 const postStyles = StyleSheet.create({
@@ -174,17 +165,14 @@ const postStyles = StyleSheet.create({
     height: 35,
     width: 35
   }
-
 });
 
-const ProfileImage = (props) => {
-  return (
-    <TouchableHighlight onPress={props.onPress} underlayColor='#DDDDDD'>
+const ProfileImage = props => {
+  return <TouchableHighlight onPress={props.onPress} underlayColor='#DDDDDD'>
       <View style={imageStyles.container}>
         <Image style={imageStyles.image} resizeMode="contain" source={require("./assets/edit.png")} />
       </View>
-    </TouchableHighlight>
-  );
+    </TouchableHighlight>;
 };
 
 const imageStyles = StyleSheet.create({
