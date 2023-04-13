@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UserUpdateView, user_update_view, UserDetailView, user_redirect_view, user_detail_view
+from .views import UserDetailView, user_update_view, user_redirect_view, UserUpdateView, user_detail_view
 
 app_name = "users"
 urlpatterns = [
